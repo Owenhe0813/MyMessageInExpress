@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/layout.css">
+    <link rel="stylesheet" href="../public/css/index.css">
+    <script src="../public/js/jquery.min.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1">
+                <div class="main">
+                    <div class="title">
+                        <h1>您的第一个留言板</h1>
+                    </div>
+                    <div class="addMsg">
+                        <button class="btn btn-primary" type="submit">添加留言</button>
+                    </div>
+                    <div class="msg">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th>用户名</th>
+                                    <th>信息</th>
+                                    <th>时间</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    {{each msgs}}
+                                    <td>{{$index}}</td>
+                                    <td>{{$value.usrname}}</td>
+                                    <td>{{$value.msg}}</td>
+                                    <td>{{$value.time}}</td>
+                                    {{/each}}
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
